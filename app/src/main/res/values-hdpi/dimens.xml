@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="week_top_margin">74px</dimen>
+<dimen name="week_left_margin">40px</dimen>
+<dimen name="cell_width">58px</dimen>
+<dimen name="cell_heigh">53px</dimen>
+<dimen name="cell_margin_top">92px</dimen>
+<dimen name="cell_margin_left">39px</dimen>
+<dimen name="cell_text_size">26px</dimen>
+
+    <dimen name="fab_margin">0dp</dimen>
+
+
+    <!--icon sizes-->
+    <dimen name="icon_very_small">20sp</dimen>
+    <dimen name="icon_small">30sp</dimen>
+    <dimen name="icon_medium">40sp</dimen>
+    <dimen name="icon_large">50sp</dimen>
+    <dimen name="icon_xx_large">60sp</dimen>
+
+
+    <!--text sizes-->
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">15sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_xx_large">30sp</dimen>
+
+
+    <dimen name="toolbar_margin_start">72dp</dimen>
+    <dimen name="flexible_space_height">72dp</dimen>
+    <dimen name="flexible_space_image_height">240dp</dimen>
+    <dimen name="flexible_space_show_fab_offset">120dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+</resources>

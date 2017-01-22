@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clickable="true"
+	android:focusableInTouchMode="true">
+
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:background="@color/schemeBackground"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/action_bar"
+			layout="@layout/action_bar" />
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="5dp"
+			android:orientation="vertical">
+
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:id="@+id/none_calendar_layout">
+
+				<!--Date strings -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:background="@drawable/rounded_field"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="5dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"
+					android:id="@+id/calendar_pop_up"
+					android:paddingRight="15dp"
+					android:paddingLeft="15dp"
+					android:orientation="horizontal">
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Gregorian date"
+							android:id="@+id/gregorian_date_string"
+							android:textColor="@color/schemeBlack"
+							android:paddingRight="10dp"
+							android:paddingTop="15dp"
+							android:paddingBottom="15dp"
+							android:textSize="@dimen/text_large"/>/>
+					</LinearLayout>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/icon_very_small"
+						android:textColor="@color/schemeDarkGray"
+						android:id="@+id/calendar_pop_up_icon"
+						android:text="@string/slide_up"/>
+
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:background="@drawable/rounded_field"
+					android:id="@+id/filter_users_layout"
+					android:focusable="true"
+					android:focusableInTouchMode="true"
+					android:paddingRight="15dp"
+					android:paddingLeft="15dp"
+					android:layout_margin="5dp">
+					<EditText
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:textColor="#000"
+						android:background="@null"
+						android:hint="@string/search_visitor"
+						android:paddingRight="15dp"
+						android:paddingTop="15dp"
+						android:paddingBottom="15dp"
+						android:textColorHint="@color/schemeDarkGray"
+						android:textSize="@dimen/text_large"
+						android:id="@+id/filter_visitors_edittext" />
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/icon_very_small"
+						android:textColor="@color/schemeDarkGray"
+						android:id="@+id/filter_visitors_icon"
+						android:paddingTop="5dp"
+						android:paddingBottom="5dp"
+						android:text="@string/search"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:visibility="visible"
+					android:orientation="vertical"
+					android:id="@+id/no_appointment_today_layout">
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/no_appointment_today"
+						android:gravity="center"
+						android:padding="20dp"
+						android:textColor="#000"
+						android:textSize="@dimen/text_large"
+						android:id="@+id/no_appointment_today" />
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:layout_margin="10dp">
+						<ImageView
+							android:layout_width="120dp"
+							android:layout_height="120dp"
+							android:id="@+id/ghost"
+							android:visibility="gone"
+							android:src="@drawable/owl1"/>
+					</LinearLayout>
+				</LinearLayout>
+
+				<!--error layout-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:padding="20dp"
+					android:visibility="visible"
+					android:orientation="vertical"
+					android:id="@+id/error_happened">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/appointment_loading_error"
+						android:gravity="center"
+						android:padding="20dp"
+						android:textColor="#000"
+						android:textSize="@dimen/text_medium"
+						android:id="@+id/error_happened_message" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/refresh"
+						android:textColor="#000"
+						android:textSize="@dimen/icon_small"
+						android:id="@+id/retry_icon" />
+				</LinearLayout>
+
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:padding="20dp"
+					android:id="@+id/appointment_loading_layout">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/gear"
+						android:textColor="#000"
+						android:textSize="@dimen/icon_small"
+						android:id="@+id/appointment_loading" />
+				</LinearLayout>
+
+				<android.support.v7.widget.RecyclerView
+					xmlns:android="http://schemas.android.com/apk/res/android"
+					android:id="@+id/recyclerView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="5dp"
+					android:paddingTop="5dp"/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+	<ListView android:id="@+id/left_drawer"
+		android:layout_width="240dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="end"
+		android:choiceMode="singleChoice"
+		android:divider="@android:color/darker_gray"
+		android:dividerHeight="1dp"
+		android:background="@color/schemeWhite"/>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:enabled="false"
+    android:background="#fff"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bars"
+            android:paddingLeft="10dp"
+            android:background="@drawable/background"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/drawer_bars"
+            android:textColor="@color/schemeBlack"
+            android:textSize="@dimen/icon_small"/>
+
+        <RelativeLayout
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:background="@drawable/background"
+            android:layout_centerInParent="true"
+            android:id="@+id/notifications_view"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/drawer_bars">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notifications_bell"
+                android:text="@string/bell"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:textColor="@color/schemeBlack"
+                android:textSize="@dimen/icon_small"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:visibility="gone"
+                android:id="@+id/notifications_count"
+                android:textColor="@color/schemeWhite"
+                android:background="@drawable/notifs_background"
+                android:textSize="@dimen/text_small"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invite"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/background"
+            android:layout_toLeftOf="@id/notifications_view"
+            android:layout_centerInParent="true"
+            android:id="@+id/invite_button"
+            android:textColor="@color/schemeBlack"
+            android:textSize="@dimen/icon_small"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_envoy3"/>
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/actionbar_break"/>-->
+</LinearLayout>

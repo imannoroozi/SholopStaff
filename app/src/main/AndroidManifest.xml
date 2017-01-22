@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--
+     * Copyright (C) 2011 Chris Gao <chris@exina.net>
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+    -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.sholop.sholopstaff"
+android:versionCode="1" android:versionName="0.5">
+
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+<permission android:name="com.sholop.sholopstaff.permission.C2D_MESSAGE"
+    android:protectionLevel="signature" />
+<uses-permission android:name="envoy.weproject.ir.envoy.permission.C2D_MESSAGE" />
+
+<application android:icon="@mipmap/sholop_logo" android:label="@string/app_name"
+    android:name=".config.AppController">
+
+    <activity android:label="@string/app_name"
+        android:name=".activities.LoginActivity" android:icon="@mipmap/sholop_logo"
+        android:windowSoftInputMode="adjustPan"
+        android:theme="@style/EnvoyTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+
+    <activity android:name=".activities.MainActivity"
+        android:theme="@style/EnvoyTheme">
+
+    </activity>
+
+    <activity android:name=".activities.SingleAppointmentActivity"
+        android:theme="@style/EnvoyTheme">
+    </activity>
+
+    <activity android:name=".activities.SplashActivity"
+        android:theme="@style/EnvoyTheme">
+    </activity>
+
+    <activity android:name=".activities.AboutUsActivity"
+        android:theme="@style/EnvoyTheme">
+    </activity>
+
+    <activity android:name=".activities.InviteActivity"
+        android:theme="@style/EnvoyTheme">
+    </activity>
+
+    <!--<receiver
+        android:name="com.google.android.gms.gcm.GcmReceiver"
+        android:exported="true"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="com.example.gcm" />
+        </intent-filter>
+    </receiver>
+    <service
+        android:name=".gcm.MyGcmPushReceiver"
+        android:exported="false" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        </intent-filter>
+    </service>
+    <service
+        android:name=".gcm.GcmIntentService"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.android.gms.iid.InstanceID" />
+        </intent-filter>
+    </service>-->
+
+    <service
+        android:name=".gcm.MyFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
+    <service
+        android:name=".gcm.MyFirebaseInstanceIDService">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+        </intent-filter>
+    </service>
+
+    <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/logo_envoy3" />
+    <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+         notification message. See README(https://goo.gl/6BKBk7) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorAccent" />
+</application>
+
+<uses-sdk android:minSdkVersion="7" />
+</manifest>

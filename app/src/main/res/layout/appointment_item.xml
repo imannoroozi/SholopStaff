@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@drawable/appointment_item_background"
+    android:layout_marginBottom="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <com.sholop.sholopstaff.utilities.RoundedNetworkImageView
+            android:id="@+id/visitor_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@android:drawable/btn_star" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/visitor_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:textDirection="rtl"
+                    android:text="guest"
+                    android:textSize="@dimen/text_medium"
+                    android:textColor="@color/schemeBlack"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="end"
+                    android:text="time"
+                    android:textSize="@dimen/text_medium"
+                    android:textColor="@color/schemeDarkGray"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_display_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="User display name"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/schemeDarkGray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/appointment_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:textDirection="rtl"
+                android:text="guest"
+                android:textSize="@dimen/text_medium"
+                android:textColor="@color/schemeBlack"/>
+            <TextView
+                android:id="@+id/appointment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="end"
+                android:text="status"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/schemeDarkGray"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/notification_container"
+    android:background="@color/schemeWhite"
+    android:layout_marginBottom="1dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <com.sholop.sholopstaff.utilities.RoundedNetworkImageView
+        android:id="@+id/notification_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/btn_star" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textDirection="rtl"
+            android:text="guest"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/schemeBlack"/>
+
+        <TextView
+            android:id="@+id/notification_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="User display name"
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/schemeDarkGray"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+

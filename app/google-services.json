@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "18767603318",
+    "firebase_url": "https://sholop-staff.firebaseio.com",
+    "project_id": "sholop-staff",
+    "storage_bucket": "sholop-staff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18767603318:android:dc58f4c1d52931c3",
+        "android_client_info": {
+          "package_name": "com.sholop.sholopstaff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18767603318-b33m4tvtsdls85qv4l75usq2pa6f4tm8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sholop.sholopstaff",
+            "certificate_hash": "B08B29E6E687D3235899B0C97261F988520B5CE7"
+          }
+        },
+        {
+          "client_id": "18767603318-vulubduss4g6d0f0fivet323uovs0nb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCDF94znm8Sd6UrKpY6xDJFIATozOrhsY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18767603318-vulubduss4g6d0f0fivet323uovs0nb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

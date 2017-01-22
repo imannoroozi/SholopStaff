@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_item_settings"
+            android:icon="@drawable/ic_black_person_24dp"
+            android:title="Profile" >
+        </item>
+        <item
+            android:title="New Appointment" >
+        </item>
+        <item
+            android:title="Search" >
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:title="Log out"
+             >
+        </item>
+        <item
+            android:title="About" >
+        </item>
+    </group>
+</menu>

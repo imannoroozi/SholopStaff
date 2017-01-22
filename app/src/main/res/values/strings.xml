@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sholop</string>
+
+    <string name="no_appointment_today">No Meeting Found.</string>
+
+    <string name="saturday">شنبه</string>
+    <string name="sunday">یکشنبه</string>
+    <string name="monday">دوشنبه</string>
+    <string name="tuesday">سه شنبه</string>
+    <string name="wednesday">چهارشنبه</string>
+    <string name="thursday">پنجشنبه</string>
+    <string name="friday">جمعه</string>
+
+    <string-array name="jalali_week_days">
+        <item>@string/saturday</item>
+        <item>@string/sunday</item>
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+    </string-array>
+
+    <string-array name="gregorian_week_days">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+
+    <string-array name="jalali_month_names">
+        <item>Farvardin</item>
+        <item>Ordibehesht</item>
+        <item>Khordad</item>
+        <item>Tir</item>
+        <item>Mordad</item>
+        <item>Shahrivar</item>
+        <item>Mehr</item>
+        <item>Aban</item>
+        <item>Azar</item>
+        <item>Dey</item>
+        <item>Bahman</item>
+        <item>Esfand</item>
+    </string-array>
+
+    <string-array name="gregorian_month_names">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="drawer_titles">
+        <item>Set Up Metting</item>
+        <item>About Us</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="drawer_icons">
+        <item>&#xf271;</item> <!--about us-->
+        <item>&#xf05a;</item> <!--about us-->
+        <item>&#xf08b;</item> <!--sign out-->
+    </string-array>
+
+    <string-array name="english_appointment_statuses">
+        <item>upcoming</item>
+        <item>time_elapsed</item>
+        <item>in_progress</item>
+        <item>done</item>
+        <item>cancelled</item>
+    </string-array>
+
+    <string-array name="persian_appointment_statuses">
+        <item>Upcoming</item>
+        <item>Time Elapsed</item>
+        <item>In Progress</item>
+        <item>Done</item>
+        <item>Cancelled</item>
+    </string-array>
+
+    <string-array name="minutes">
+        <item>00</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+
+    <!--Icons-->
+    <string name="arrow_left">&#xf0a8;</string>
+    <string name="arrow_right">&#xf0a9;</string>
+    <string name="slide_up">&#xf073;</string>
+    <string name="slide_down">&#xf13a;</string>
+    <string name="gear">&#xf013;</string>
+    <string name="search">&#xf002;</string>
+    <string name="sun">&#xf185;</string>
+    <string name="bars">&#xf0c9;</string>
+    <string name="bell">&#xf0a2;</string>
+    <string name="refresh">&#xf021;</string>
+    <string name="password_icon">&#xf084;</string>
+    <string name="sign_in">&#xf090;</string>
+    <string name="envelope">&#xf003;</string>
+    <string name="phone">&#xf095;</string>
+    <string name="invite">&#xf271;</string>
+    <string name="back">&#xf104;</string>
+    <string name="user">&#xf007;</string>
+    <string name="title">&#xf02b;</string>
+    <string name="location_map">&#xf041;</string>
+    <string name="location">&#xf124;</string>
+    <string name="clock">&#xf017;</string>
+    <string name="check">&#xf00c;</string>
+    <string name="tag">&#xf02b;</string>
+    <string name="calendar">&#xf073;</string>
+    <string name="coffee">&#xf0f4;</string>
+    <string name="location_arrow">&#xf124;</string>
+    <string name="times">&#xf00d;</string>
+    <string name="plus">&#xf067;</string>
+
+    <string name="appointment_loading_error">Some error occurred. Please try again.</string>
+    <string name="search_visitor">Search Guests</string>
+    <string name="single_space" />
+    <string name="appointment_subject">Meeting Title</string>
+    <string name="user_display_name">Host</string>
+    <string name="appointment_time">Meeting Time</string>
+    <string name="appointment_location">Meeting Location</string>
+    <string name="appointment_status">Meeting Status</string>
+    <string name="single_comma">,</string>
+    <string name="no_notifications">No new event</string>
+    <string name="notifications">Events</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="enter_credentials">Please fill in the blanks</string>
+    <string name="logging_in">Please wait...</string>
+    <string name="hour">Hour</string>
+    <string name="minute">Minute</string>
+    <string name="appointment_title">Meeting Title</string>
+    <string name="visitor_name">Guest Full Name</string>
+    <string name="visitor_email">Guest Email</string>
+    <string name="visitor_tell">Guest Contact Number</string>
+    <string name="create">Create</string>
+    <string name="appointment_spec">Meeting Information</string>
+    <string name="visitor_spec">Guest Information</string>
+    <string name="fill_tell_or_email">Please Fill at least one field</string>
+    <string name="time_out_error">Connection seems to be poor.</string>
+    <string name="set_up_meeting">Set Up Meeting</string>
+    <string name="add_guest">Add Guest</string>
+
+</resources>

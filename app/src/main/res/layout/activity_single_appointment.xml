@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/schemeWhite"
+    android:id="@+id/container">
+
+    <!--loading error-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/schemeWhite"
+        android:padding="20dp"
+        android:id="@+id/appointment_loading_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gear"
+            android:textColor="#000"
+            android:textSize="@dimen/icon_small"
+            android:id="@+id/appointment_loading" />
+    </LinearLayout>
+
+    <!--error layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/schemeWhite"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/error_happened">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointment_loading_error"
+            android:gravity="center"
+            android:background="@color/schemeWhite"
+            android:padding="20dp"
+            android:textColor="#000"
+            android:textSize="@dimen/text_medium"
+            android:id="@+id/error_happened_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/refresh"
+            android:textColor="#000"
+            android:textSize="@dimen/icon_small"
+            android:id="@+id/retry_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/appointment_container">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/company_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@mipmap/sholop_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical|right">
+
+                <TableRow>
+                <TextView
+                    android:id="@+id/subject_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/tag"
+                    android:textSize="@dimen/icon_small"
+                    android:textColor="@color/schemeDarkGray"/>
+
+                <TextView
+                    android:id="@+id/subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="left|center_vertical"
+                    android:text="Subject"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_large"
+                    android:textColor="@color/schemeBlack"/>
+                </TableRow>
+                <TableRow android:layout_height="1px"
+                    android:background="#BDBDBD">
+                    <View
+                        android:layout_height="1px"
+                        android:layout_width="match_parent">
+                    </View>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/date_time_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/calendar"
+                        android:textSize="@dimen/icon_small"
+                        android:textColor="@color/schemeDarkGray"/>
+
+                    <TextView
+                        android:id="@+id/date_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Time"
+                        android:paddingLeft="15dp"
+                        android:textDirection="rtl"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/schemeBlack"/>
+
+                </TableRow>
+
+                <TableRow android:layout_height="1px"
+                    android:background="#BDBDBD">
+                    <View
+                        android:layout_height="1px"
+                        android:layout_width="match_parent">
+                    </View>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/user_display_name_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/coffee"
+                        android:textSize="@dimen/icon_small"
+                        android:textColor="@color/schemeDarkGray"/>
+
+                    <TextView
+                        android:id="@+id/user_display_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center_vertical"
+                        android:text="User display name"
+                        android:paddingLeft="15dp"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/schemeBlack"/>
+
+                </TableRow>
+                <TableRow android:layout_height="1px"
+                    android:background="#BDBDBD">
+                    <View
+                        android:layout_height="1px"
+                        android:layout_width="match_parent">
+                    </View>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/location_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/location_arrow"
+                        android:textSize="@dimen/icon_small"
+                        android:textColor="@color/schemeDarkGray"/>
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Location"
+                        android:paddingLeft="15dp"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/schemeBlack"/>
+
+                </TableRow>
+                <TableRow android:layout_height="1px"
+                    android:background="#BDBDBD">
+                    <View
+                        android:layout_height="1px"
+                        android:layout_width="match_parent">
+                    </View>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/status_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/check"
+                        android:textSize="@dimen/icon_small"
+                        android:textColor="@color/schemeDarkGray"/>
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="left|center_vertical"
+                        android:text="Status"
+                        android:paddingLeft="15dp"
+                        android:textSize="@dimen/text_large"
+                        android:textColor="@color/schemeBlack"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/guests_header"
+                android:layout_marginTop="15dp"
+                android:text="Guest(s)"
+                android:textColor="@color/schemeBlack"
+                android:gravity="center"
+                android:textSize="@dimen/text_large"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/guests_view"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

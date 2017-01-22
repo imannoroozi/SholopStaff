@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#00000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--header layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="@color/schemeBackground"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notification_header_text"
+            android:textColor="@color/schemeBlack"
+            android:textSize="@dimen/text_large"
+            android:text="@string/notifications"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/notifications_header_bell"
+            android:text="@string/bell"
+            android:textColor="@color/schemeBlack"
+            android:textSize="@dimen/icon_small"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/schemeWhite"
+        android:padding="20dp"
+        android:id="@+id/notification_error_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointment_loading_error"
+            android:gravity="center"
+            android:background="@color/schemeWhite"
+            android:padding="20dp"
+            android:textColor="#000"
+            android:textSize="@dimen/text_medium"
+            android:id="@+id/error_happened" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/no_notification_layout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_notifications"
+            android:gravity="center"
+            android:background="@color/schemeWhite"
+            android:padding="20dp"
+            android:textColor="#000"
+            android:textSize="@dimen/text_medium"
+            android:id="@+id/no_notifications" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/schemeWhite"
+        android:padding="20dp"
+        android:id="@+id/notification_loading_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gear"
+            android:textColor="#000"
+            android:textSize="@dimen/icon_small"
+            android:id="@+id/notification_loading" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/notification_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"/>
+</LinearLayout>

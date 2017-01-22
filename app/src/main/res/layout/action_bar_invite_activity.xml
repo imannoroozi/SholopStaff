@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:enabled="false"
+    android:background="#fff"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:id="@+id/back_action"
+            android:background="@drawable/background"
+            android:textColor="@color/schemeGray"
+            android:textSize="@dimen/icon_small"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/logo_envoy3"/>
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/actionbar_break"/>-->
+</LinearLayout>

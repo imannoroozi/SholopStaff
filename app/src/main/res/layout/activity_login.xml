@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/schemeBackground"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/some">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_marginBottom="20px"
+            android:src="@drawable/logo_envoy3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/rounded_field"
+            android:id="@+id/email_layout"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:textColor="#000"
+                android:background="@null"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/schemeDarkGray"
+                android:textSize="@dimen/text_large"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:id="@+id/email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/icon_very_small"
+                android:textColor="@color/schemeDarkGray"
+                android:id="@+id/email_icon"
+                android:text="@string/envelope"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/rounded_field"
+            android:id="@+id/password_layout"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:textColor="#000"
+                android:background="@null"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:textColorHint="@color/schemeDarkGray"
+                android:textSize="@dimen/text_large"
+                android:id="@+id/password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/icon_very_small"
+                android:textColor="@color/schemeDarkGray"
+                android:id="@+id/password_icon"
+                android:text="@string/password_icon"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/button_background"
+            android:id="@+id/btnLogin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:layout_marginRight="5dp"
+                android:textColor="#fff"
+                android:background="@null"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/login"
+                android:textSize="@dimen/text_large"
+                android:id="@+id/login_textview" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/icon_very_small"
+                android:textColor="@color/schemeWhite"
+                android:id="@+id/login_icon"
+                android:text="@string/sign_in"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

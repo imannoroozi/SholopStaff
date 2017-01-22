@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:clickable="true"
+	android:background="@color/schemeBackground"
+	android:orientation="vertical"
+	android:layout_marginTop="5dp"
+	android:focusableInTouchMode="true">
+
+	<TextView
+		android:layout_width="30dp"
+		android:layout_gravity="right"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/times"
+		android:textColor="@color/schemeBlack"
+		android:id="@+id/remove_icon"
+		android:textSize="@dimen/icon_small"/>
+	<!--guest name-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@drawable/rounded_field"
+		android:id="@+id/app_visitor_name_layout"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_margin="5dp">
+		<EditText
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:textColor="#000"
+			android:background="@null"
+			android:hint="@string/visitor_name"
+			android:textColorHint="@color/schemeDarkGray"
+			android:textSize="@dimen/text_medium"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingRight="5dp"
+			android:paddingLeft="5dp"
+			android:id="@+id/app_visitor_name" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/icon_very_small"
+			android:textColor="@color/schemeDarkGray"
+			android:id="@+id/app_visitor_name_icon"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
+			android:layout_marginRight="10dp"
+			android:text="@string/user"/>
+	</LinearLayout>
+
+	<!--guest email-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@drawable/rounded_field"
+		android:id="@+id/app_visitor_email_layout"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_margin="5dp">
+		<EditText
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical|left"
+			android:textColor="#000"
+			android:background="@null"
+			android:inputType="textEmailAddress"
+			android:hint="@string/visitor_email"
+			android:textColorHint="@color/schemeDarkGray"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingRight="5dp"
+			android:paddingLeft="5dp"
+			android:textSize="@dimen/text_medium"
+			android:id="@+id/app_visitor_email" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/icon_very_small"
+			android:textColor="@color/schemeDarkGray"
+			android:id="@+id/app_visitor_email_icon"
+			android:paddingTop="5dp"
+			android:layout_marginRight="10dp"
+			android:paddingBottom="5dp"
+			android:text="@string/envelope"/>
+	</LinearLayout>
+
+	<!--guest tell-->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:background="@drawable/rounded_field"
+		android:id="@+id/app_visitor_tell_layout"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:layout_margin="5dp">
+		<EditText
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical|left"
+			android:textColor="#000"
+			android:background="@null"
+			android:digits="0123456789"
+			android:inputType="phone"
+			android:hint="@string/visitor_tell"
+			android:textColorHint="@color/schemeGray"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingRight="5dp"
+			android:paddingLeft="5dp"
+			android:textSize="@dimen/text_medium"
+			android:id="@+id/app_visitor_tell" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="@dimen/icon_very_small"
+			android:textColor="@color/schemeDarkGray"
+			android:id="@+id/app_visitor_tell_icon"
+			android:layout_marginRight="10dp"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp"
+			android:text="@string/phone"/>
+	</LinearLayout>
+
+
+</LinearLayout>

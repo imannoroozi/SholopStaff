@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clickable="true"
+	android:background="@color/schemeBackground"
+	android:focusableInTouchMode="true">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<include
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/action_bar"
+			layout="@layout/action_bar_invite_activity" />
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:id="@+id/none_calendar_layout">
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="10dp"
+					android:gravity="center"
+					android:text="@string/appointment_spec"
+					android:id="@+id/appointment_spec_subject"
+					android:textColor="@color/schemeDarkGray"
+					android:textSize="@dimen/text_medium"/>
+
+				<!--Date strings -->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:background="@drawable/rounded_field"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:id="@+id/calendar_pop_up"
+					android:orientation="horizontal">
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="JAlali date"
+							android:id="@+id/gregorian_date_string"
+							android:textColor="@color/schemeBlack"
+							android:textSize="@dimen/text_large"/>
+					</LinearLayout>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/icon_very_small"
+						android:textColor="@color/schemeDarkGray"
+						android:id="@+id/calendar_pop_up_icon"
+						android:text="@string/slide_up"/>
+				</LinearLayout>
+
+				<!--appointment title-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:background="@drawable/rounded_field"
+					android:id="@+id/app_title_layout"
+					android:focusable="true"
+					android:focusableInTouchMode="true"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="5dp"
+					android:layout_marginRight="5dp"
+					android:layout_marginLeft="5dp">
+					<EditText
+						android:layout_width="0dp"
+						android:layout_weight="1"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical"
+						android:textColor="#000"
+						android:background="@null"
+						android:hint="@string/appointment_title"
+						android:textColorHint="@color/schemeDarkGray"
+						android:textSize="@dimen/text_large"
+						android:paddingTop="10dp"
+						android:paddingBottom="10dp"
+						android:paddingRight="5dp"
+						android:paddingLeft="5dp"
+						android:id="@+id/app_title" />
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="@dimen/icon_very_small"
+						android:textColor="@color/schemeDarkGray"
+						android:id="@+id/app_title_icon"
+						android:layout_marginRight="10dp"
+						android:paddingTop="5dp"
+						android:paddingBottom="5dp"
+						android:text="@string/title"/>
+				</LinearLayout>
+
+				<!--appointment time-->
+				<LinearLayout
+
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="5dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:padding="10dp"
+						android:layout_marginRight="5dp"
+						android:gravity="center"
+						android:background="@drawable/rounded_field"
+						android:orientation="horizontal">
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:textColor="@color/schemeDarkGray"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:id="@+id/hour_header"
+							android:text="@string/hour"/>
+						<Spinner
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:id="@+id/app_hour"
+							android:background="@drawable/time_background"
+							android:layout_weight="1"
+							android:padding="5dp"
+							android:gravity="center"
+							android:spinnerMode="dropdown">
+						</Spinner>
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:textColor="@color/schemeDarkGray"
+							android:textSize="@dimen/icon_very_small"
+							android:id="@+id/app_hour_icon"
+							android:layout_weight="1"
+							android:gravity="right"
+							android:text="@string/clock"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:padding="10dp"
+						android:layout_weight="1"
+						android:background="@drawable/rounded_field"
+						android:orientation="horizontal">
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:id="@+id/minute_header"
+							android:textColor="@color/schemeDarkGray"
+							android:text="@string/minute"/>
+						<Spinner
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:id="@+id/app_min"
+							android:layout_weight="1"
+							android:padding="5dp"
+							android:gravity="center"
+							android:spinnerMode="dropdown"
+							android:background="@drawable/time_background">
+						</Spinner>
+						<TextView
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:textColor="@color/schemeDarkGray"
+							android:id="@+id/app_min_icon"
+							android:layout_weight="1"
+							android:gravity="right"
+							android:textSize="@dimen/icon_very_small"
+							android:text="@string/clock"/>
+					</LinearLayout>
+
+
+				</LinearLayout>
+
+				<!--appointment location-->
+				<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:background="@drawable/rounded_field"
+				android:id="@+id/app_location_layout"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+				android:layout_margin="5dp">
+				<EditText
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:textColor="#000"
+					android:background="@null"
+					android:hint="@string/appointment_location"
+					android:textColorHint="@color/schemeDarkGray"
+					android:textSize="@dimen/text_large"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:paddingRight="5dp"
+					android:paddingLeft="5dp"
+					android:id="@+id/app_location" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="@dimen/icon_very_small"
+					android:textColor="@color/schemeDarkGray"
+					android:id="@+id/app_location_icon"
+					android:layout_marginRight="10dp"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+					android:text="@string/location"/>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:text="@string/visitor_spec"
+				android:gravity="center"
+				android:id="@+id/visitor_spec_subject"
+				android:textColor="@color/schemeDarkGray"
+				android:textSize="@dimen/text_medium"/>
+
+				<!--guests section-->
+				<android.support.v7.widget.RecyclerView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/invite_guests_view">
+
+				</android.support.v7.widget.RecyclerView>
+
+				<!--add guest button-->
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical"
+					android:background="@color/schemeWhite"
+					android:layout_marginTop="5dp"
+					android:id="@+id/add_guest_layout"
+					android:orientation="horizontal">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:gravity="left"
+						android:id="@+id/add_guest_text"
+						android:paddingLeft="10dp"
+						android:text="@string/add_guest"
+						android:textColor="@color/schemeBlack"
+						android:textSize="@dimen/text_large"/>
+
+					<TextView
+						android:layout_width="30dp"
+						android:layout_gravity="right"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:text="@string/plus"
+						android:id="@+id/add_guest_icon"
+						android:textColor="@color/schemeDarkGray"
+						android:layout_marginRight="10dp"
+						android:paddingTop="5dp"
+						android:paddingBottom="5dp"
+						android:textSize="@dimen/icon_very_small"/>
+				</LinearLayout>
+			</LinearLayout>
+
+		<!--loading view-->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center_horizontal|bottom"
+			android:id="@+id/creating_appointment_layout"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+			android:layout_margin="5dp"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp"
+			android:visibility="gone"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/schemeRed"
+				android:text="@string/gear"
+				android:textSize="@dimen/icon_large"
+				android:id="@+id/creating_icon" />
+
+		</LinearLayout>
+
+		<!--button view-->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25dp"
+			android:orientation="horizontal"
+			android:id="@+id/create_layout"
+			android:gravity="center">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/check_button"
+				android:background="@drawable/button_background"
+				android:layout_margin="10dp"
+				android:gravity="center">
+
+				<TextView
+					android:id="@+id/check_button_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+					android:text="@string/set_up_meeting"
+					android:textSize="@dimen/text_large"
+					android:textColor="@color/schemeWhite"/>
+				<TextView
+					android:id="@+id/check_button_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingRight="15dp"
+					android:paddingTop="5dp"
+					android:paddingBottom="5dp"
+					android:text="@string/coffee"
+					android:textSize="@dimen/icon_very_small"
+					android:textColor="@color/schemeWhite"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
